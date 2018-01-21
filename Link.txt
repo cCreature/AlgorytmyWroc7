@@ -1,0 +1,2 @@
+Link do repo: https://github.com/cCreature/AlgorytmyWroc7
+Wersja Javy: 1.8
