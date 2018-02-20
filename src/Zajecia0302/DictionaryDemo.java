@@ -6,6 +6,7 @@ import java.util.HashMap;
 public class DictionaryDemo {
     public static void main(String[] args) {
 
+        //
         HashMap<String, String> szyfrCezara = new HashMap<>();
         szyfrCezara.put("A", "D");
         szyfrCezara.put("B", "E");

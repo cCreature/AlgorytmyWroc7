@@ -13,36 +13,38 @@ public class Kopiec {
             i = j;  //przenosimy się na pozycję ojca
             j = Math.floorDiv(i - 1, 2); //obliczamy indeks ojca
         }
-        tab[i] = element;
+        tab[i] = element; //wstawiamy element kopca
     }
 
     int deleteElement(){
         if(n > 0){
             int root = tab[0];
             n--;
-            int element = tab[n];
+            int element = tab[n]; //zapamiętujemy ostatni element kopca
             int i = 0; //przeszukiwanie drzewa rozpoczynamy od korzenia
             int j = 1; //j wskazuje lewego syna
-            while (j < n){
+            while (j < n){ //dopóki uda nam się odnaleźć lewego syna idziemy w dół kopca
                 if(j+1 < n && tab[j+1] > tab[j]){//szukamy większego syna
                     j = j+1;
                 }
-                if(element > tab[j])
+                if(element > tab[j]) //jeśli warunek kopca spełniony, wychodzimy z pętli
                     break;
                 tab[i] = tab[j]; //inaczej kopiujemy większego syna do ojca
                 i = j; //przechodzimy na pozycję większego syna
                 j = 2*j + 1;//j wskazuje lewego syna
             }
-            tab[i] = element;
+            tab[i] = element; //w odpowiednim miejscu umieszczamy ostatni element, aby zachowany był
+            //warunek kopca
             return root;
         }
         return -1;
     }
 
     public void rozbierzKopiec(){
-        int sortedTab[] = new int[n];
+        int sortedTab[] = new int[n]; //tworzę tablice, która posłuży mi do sortowania
         for (int i = n-1; i >= 0 ; i--) {
-            sortedTab[i] = deleteElement();
+            sortedTab[i] = deleteElement();//kasuje korzeń i jednocześnie zapisuje sobie jego wartość na ostatnim wolnym
+            //miejscu tablicy
         }
 
         for (int i = 0; i < sortedTab.length; i++) {

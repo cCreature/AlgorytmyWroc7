@@ -5,9 +5,10 @@ import java.util.Scanner;
 public class OdlegloscOdSrodka {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = Integer.parseInt(sc.nextLine());
+        int n = Integer.parseInt(sc.nextLine()); //liczbę przypadków testowych
 
-        int[][] input = new int[n][3];
+        int[][] input = new int[n][3];//tworzymy nową tablicę dwuwymiarową. Możemy wyobrazić ją sobie jak
+        //pole do gry w statki o rozmiarze n x 3, które będziemy uzupełniać danymi
         double[][] sort = new double[n][2];
 
         for (int i = 0; i < n; i++) {

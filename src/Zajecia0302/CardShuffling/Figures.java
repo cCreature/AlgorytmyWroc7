@@ -1,6 +1,7 @@
 package Zajecia0302.CardShuffling;
 
 public enum Figures {
+    //po kolei wszystkie figury
     ACE(0),
     TWO(1),
     THREE(2),
